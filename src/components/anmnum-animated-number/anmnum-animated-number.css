@@ -1,0 +1,41 @@
+:host {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5em;
+}
+
+.number-container {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  border: 0.2em solid black;
+  border-radius: 10%;
+  margin-right: 10%;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+}
+
+.number-container svg {
+  width: 100%;
+  min-height: 100%;
+}
+
+.number-container:last-child {
+  margin-right: 0;
+}
+
+.number-container .numbers-column {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  /* ADD 100 MORE TRANSLATION TO GET TO NEXT NUMBER */
+  transform: translateY(0%);
+  overflow: visible;
+  transition: all 600ms ease;
+}

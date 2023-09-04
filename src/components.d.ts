@@ -6,56 +6,44 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface AnmnumAnimatedNumber {
+        "backgroundColor": string;
+        "borderColor": string;
+        "borderWidth": string;
+        "number": number;
+        "textColor": string;
+        "width": string;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLAnmnumAnimatedNumberElement extends Components.AnmnumAnimatedNumber, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLAnmnumAnimatedNumberElement: {
+        prototype: HTMLAnmnumAnimatedNumberElement;
+        new (): HTMLAnmnumAnimatedNumberElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "anmnum-animated-number": HTMLAnmnumAnimatedNumberElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface AnmnumAnimatedNumber {
+        "backgroundColor"?: string;
+        "borderColor"?: string;
+        "borderWidth"?: string;
+        "number"?: number;
+        "textColor"?: string;
+        "width"?: string;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "anmnum-animated-number": AnmnumAnimatedNumber;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "anmnum-animated-number": LocalJSX.AnmnumAnimatedNumber & JSXBase.HTMLAttributes<HTMLAnmnumAnimatedNumberElement>;
         }
     }
 }
