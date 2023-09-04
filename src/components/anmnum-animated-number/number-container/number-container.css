@@ -1,3 +1,30 @@
 :host {
-  display: block;
+  background-color: #000;
+  border-radius: 10%;
+}
+
+.number-container {
+  background-color: #fff;
+  box-sizing: border-box;
+  height: 100%;
+  border-radius: 10%;
+  margin: 4%;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+}
+
+.number-container svg {
+  width: 100%;
+  min-height: 100%;
+}
+
+.number-container .numbers-column {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  /* ADD 100 MORE TRANSLATION TO GET TO NEXT NUMBER */
+  transform: translateY(0%);
+  overflow: visible;
+  transition: all 600ms ease;
 }

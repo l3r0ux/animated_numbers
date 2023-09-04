@@ -14,6 +14,9 @@ export namespace Components {
         "textColor": string;
         "width": string;
     }
+    interface NumberContainer {
+        "num": string;
+    }
 }
 declare global {
     interface HTMLAnmnumAnimatedNumberElement extends Components.AnmnumAnimatedNumber, HTMLStencilElement {
@@ -22,8 +25,15 @@ declare global {
         prototype: HTMLAnmnumAnimatedNumberElement;
         new (): HTMLAnmnumAnimatedNumberElement;
     };
+    interface HTMLNumberContainerElement extends Components.NumberContainer, HTMLStencilElement {
+    }
+    var HTMLNumberContainerElement: {
+        prototype: HTMLNumberContainerElement;
+        new (): HTMLNumberContainerElement;
+    };
     interface HTMLElementTagNameMap {
         "anmnum-animated-number": HTMLAnmnumAnimatedNumberElement;
+        "number-container": HTMLNumberContainerElement;
     }
 }
 declare namespace LocalJSX {
@@ -35,8 +45,12 @@ declare namespace LocalJSX {
         "textColor"?: string;
         "width"?: string;
     }
+    interface NumberContainer {
+        "num"?: string;
+    }
     interface IntrinsicElements {
         "anmnum-animated-number": AnmnumAnimatedNumber;
+        "number-container": NumberContainer;
     }
 }
 export { LocalJSX as JSX };
@@ -44,6 +58,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "anmnum-animated-number": LocalJSX.AnmnumAnimatedNumber & JSXBase.HTMLAttributes<HTMLAnmnumAnimatedNumberElement>;
+            "number-container": LocalJSX.NumberContainer & JSXBase.HTMLAttributes<HTMLNumberContainerElement>;
         }
     }
 }
