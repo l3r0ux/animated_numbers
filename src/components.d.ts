@@ -12,7 +12,6 @@ export namespace Components {
         "borderWidth": string;
         "number": number;
         "textColor": string;
-        "width": string;
     }
     interface NumberContainer {
         "num": string;
@@ -43,7 +42,6 @@ declare namespace LocalJSX {
         "borderWidth"?: string;
         "number"?: number;
         "textColor"?: string;
-        "width"?: string;
     }
     interface NumberContainer {
         "num"?: string;

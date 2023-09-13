@@ -1,4 +1,4 @@
-import { Component, Host, Prop, State, h } from '@stencil/core';
+import { Component, Host, Prop, State, h, Watch } from '@stencil/core';
 
 @Component({
   tag: 'anmnum-animated-number',
@@ -7,7 +7,6 @@ import { Component, Host, Prop, State, h } from '@stencil/core';
 })
 export class AnmnumAnimatedNumber {
   @Prop() number: number
-  @Prop() width: string
   @Prop() textColor: string
   @Prop() borderColor: string
   @Prop() borderWidth: string
@@ -19,9 +18,14 @@ export class AnmnumAnimatedNumber {
     this.numArray = this.number.toString().split('')
   }
 
+  @Watch('number')
+  numberWatchHandler(number: string) {
+    this.numArray = number.toString().split('')
+  }
+
   render() {
     return (
-      <Host style={{ width: this.width }}>
+      <Host>
         {this.numArray.map((num: string) =>
           <number-container num={num} />
         )}

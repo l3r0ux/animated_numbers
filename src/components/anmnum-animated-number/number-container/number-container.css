@@ -1,30 +1,39 @@
 :host {
   background-color: #000;
   border-radius: 10%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.number-container {
+.numbers-container {
   background-color: #fff;
   box-sizing: border-box;
-  height: 100%;
+  height: calc(100% - 8%);
+  width: calc(100% - 8%);
   border-radius: 10%;
-  margin: 4%;
   aspect-ratio: 4/5;
   overflow: hidden;
 }
 
-.number-container svg {
+.numbers-container .number-wrapper {
   width: 100%;
   min-height: 100%;
 }
 
-.number-container .numbers-column {
+.numbers-container svg {
+  width: 100%;
+  min-height: 100%;
+}
+
+.numbers-container .numbers-column {
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 100%;
   /* ADD 100 MORE TRANSLATION TO GET TO NEXT NUMBER */
-  transform: translateY(0%);
+  transform: translateY(100%);
   overflow: visible;
   transition: all 600ms ease;
 }
