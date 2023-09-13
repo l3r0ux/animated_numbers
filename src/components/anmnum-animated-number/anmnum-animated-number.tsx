@@ -6,6 +6,9 @@ import { Component, Host, Prop, State, h, Watch } from '@stencil/core';
   shadow: true,
 })
 export class AnmnumAnimatedNumber {
+  // TODO: Handle negative numbers
+  // TODO: Make spin animation on boot up
+
   @Prop() number: number
   @Prop() textColor: string
   @Prop() borderColor: string
