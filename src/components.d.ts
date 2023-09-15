@@ -10,7 +10,7 @@ export namespace Components {
         "backgroundColor": string;
         "borderColor": string;
         "borderWidth": string;
-        "number": number;
+        "number": string;
         "numberXMargin": string;
         "textColor": string;
     }
@@ -43,7 +43,7 @@ declare namespace LocalJSX {
         "backgroundColor"?: string;
         "borderColor"?: string;
         "borderWidth"?: string;
-        "number"?: number;
+        "number"?: string;
         "numberXMargin"?: string;
         "textColor"?: string;
     }

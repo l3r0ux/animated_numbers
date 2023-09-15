@@ -6,12 +6,12 @@ import { Component, Host, Prop, State, h, Watch } from '@stencil/core';
   shadow: true,
 })
 export class AnmnumAnimatedNumber {
-  // TODO: Make spin animation on boot up
-  // TODO: Make number of number blocks to show an option, then show 0s everywhere for open spaces? then depending on number of blocks set max number value it can go
+  // TODO: Make spin animation new number on boot up
+  // TODO: Make infinite spin setting, that just spins, and if set off, it goes back to the number?
   // TODO: Make each consecutive number more skewed on x axis to create 3d effect
   hostEl: HTMLElement
 
-  @Prop() number: number
+  @Prop() number: string
   @Prop() textColor: string
   @Prop() borderColor: string
   @Prop() borderWidth: string
