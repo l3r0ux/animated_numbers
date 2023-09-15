@@ -10,6 +10,7 @@ export class AnmnumAnimatedNumber {
   // TODO: Make infinite spin setting, that just spins, and if set off, it goes back to the number?
   // TODO: Make each consecutive number more skewed on x axis to create 3d effect
   // TODO: Account for decimals? (add comma svg)
+  // TODO: Add pad 0's funcionality, which pads a specified num of 0's in front of the numbers
   hostEl: HTMLElement
 
   @Prop() number: string
