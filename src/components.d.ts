@@ -11,10 +11,12 @@ export namespace Components {
         "borderColor": string;
         "borderWidth": string;
         "number": number;
+        "numberXMargin": string;
         "textColor": string;
     }
     interface NumberContainer {
         "num": string;
+        "numberXMargin": string;
     }
 }
 declare global {
@@ -41,10 +43,12 @@ declare namespace LocalJSX {
         "borderColor"?: string;
         "borderWidth"?: string;
         "number"?: number;
+        "numberXMargin"?: string;
         "textColor"?: string;
     }
     interface NumberContainer {
         "num"?: string;
+        "numberXMargin"?: string;
     }
     interface IntrinsicElements {
         "anmnum-animated-number": AnmnumAnimatedNumber;

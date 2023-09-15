@@ -1,10 +1,17 @@
 :host {
+  position: relative;
   background-color: #000;
   border-radius: 10%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  left: -100%;
+  transition: left 500ms ease;
+}
+
+:host(.animate-in) {
+  left: 0;
 }
 
 .numbers-container {
@@ -33,7 +40,7 @@
   height: 100%;
   width: 100%;
   /* ADD 100 MORE TRANSLATION TO GET TO NEXT NUMBER */
-  transform: translateY(100%);
+  transform: translateY(0);
   overflow: visible;
   transition: all 600ms ease;
 }

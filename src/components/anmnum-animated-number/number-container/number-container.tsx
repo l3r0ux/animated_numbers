@@ -7,21 +7,38 @@ import { Component, Host, Prop, h, Watch } from '@stencil/core';
 })
 export class NumberContainer {
   numbersColumn: HTMLDivElement
+  hostEl: HTMLElement
 
   @Prop() num: string
+  @Prop() numberXMargin: string
 
   componentDidLoad() {
+    if (this.num === '-')
+      return this.numbersColumn.style.transform = 'translateY(-1000%)'
     this.numbersColumn.style.transform = `translateY(-${this.num}00%)`
+
+    requestAnimationFrame(() => {
+      this.hostEl.classList.add('animate-in')
+    })
   }
 
   @Watch('num')
   numWatchHandler(num: string) {
+    // const numberWidth = this.hostEl.clientWidth
+    // this.hostEl
+
+    if (num === '-')
+      return this.numbersColumn.style.transform = 'translateY(-1000%)'
     this.numbersColumn.style.transform = `translateY(-${num}00%)`
+
+    // requestAnimationFrame(() => {
+    //   this.hostEl.classList.add('animate-in')
+    // })
   }
 
   render() {
     return (
-      <Host>
+      <Host ref={(el: HTMLElement) => this.hostEl = el} style={{ margin: `0 ${this.numberXMargin}` }}>
         <div class="numbers-container">
           <div ref={(el: HTMLDivElement) => this.numbersColumn = el} class="numbers-column">
             <div class="number-wrapper" data-value="0">
@@ -73,6 +90,11 @@ export class NumberContainer {
             <div class="number-wrapper" data-value="9">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
                 <path d="M11 20L16.2269 11.6721M7 9C7 6.23858 9.23858 4 12 4C14.7614 4 17 6.23858 17 9C17 11.7614 14.7614 14 12 14C9.23858 14 7 11.7614 7 9Z" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="number-wrapper" data-value="-">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <path xmlns="http://www.w3.org/2000/svg" d="M6 12L18 12" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </div>
           </div>
