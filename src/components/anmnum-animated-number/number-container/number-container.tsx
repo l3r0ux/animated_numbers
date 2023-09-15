@@ -11,29 +11,36 @@ export class NumberContainer {
 
   @Prop() num: string
   @Prop() numberXMargin: string
+  @Prop() isInitialRender: boolean
 
   componentDidLoad() {
     if (this.num === '-')
       return this.numbersColumn.style.transform = 'translateY(-1000%)'
     this.numbersColumn.style.transform = `translateY(-${this.num}00%)`
 
-    requestAnimationFrame(() => {
-      this.hostEl.classList.add('animate-in')
-    })
+    if (!this.isInitialRender) {
+      this.hostEl.style.zIndex = '0'
+      this.hostEl.style.left = `-${this.hostEl.clientWidth}px`
+
+      requestAnimationFrame(() => {
+        this.hostEl.style.left = '0'
+
+        setTimeout(() => {
+          this.hostEl.style.zIndex = '1'
+        }, 500)
+      })
+    }
+  }
+
+  disconnectedCallback() {
+    console.log('disconnected')
   }
 
   @Watch('num')
   numWatchHandler(num: string) {
-    // const numberWidth = this.hostEl.clientWidth
-    // this.hostEl
-
     if (num === '-')
       return this.numbersColumn.style.transform = 'translateY(-1000%)'
     this.numbersColumn.style.transform = `translateY(-${num}00%)`
-
-    // requestAnimationFrame(() => {
-    //   this.hostEl.classList.add('animate-in')
-    // })
   }
 
   render() {

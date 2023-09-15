@@ -36,6 +36,17 @@
       num = 512
       animatedNumberComponent.setAttribute('number', num)
 
+      setTimeout(() => {
+        num = 1280
+        animatedNumberComponent.setAttribute('number', num)
+
+        setTimeout(() => {
+          num = 293
+          animatedNumberComponent.setAttribute('number', num)
+        }, 1000)
+
+      }, 1000)
+
     }, 1000)
 
     // setInterval(() => {

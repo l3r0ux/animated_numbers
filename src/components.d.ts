@@ -15,6 +15,7 @@ export namespace Components {
         "textColor": string;
     }
     interface NumberContainer {
+        "isInitialRender": boolean;
         "num": string;
         "numberXMargin": string;
     }
@@ -47,6 +48,7 @@ declare namespace LocalJSX {
         "textColor"?: string;
     }
     interface NumberContainer {
+        "isInitialRender"?: boolean;
         "num"?: string;
         "numberXMargin"?: string;
     }
