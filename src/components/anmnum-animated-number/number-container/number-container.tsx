@@ -7,7 +7,6 @@ import { Component, Host, Prop, h, Watch } from '@stencil/core';
 })
 export class NumberContainer {
   numbersColumn: HTMLDivElement
-  hostEl: HTMLElement
 
   @Prop() num: string
   @Prop() numberXMargin: string
@@ -17,23 +16,6 @@ export class NumberContainer {
     if (this.num === '-')
       return this.numbersColumn.style.transform = 'translateY(-1000%)'
     this.numbersColumn.style.transform = `translateY(-${this.num}00%)`
-
-    if (!this.isInitialRender) {
-      this.hostEl.style.zIndex = '0'
-      this.hostEl.style.left = `-${this.hostEl.clientWidth}px`
-
-      requestAnimationFrame(() => {
-        this.hostEl.style.left = '0'
-
-        setTimeout(() => {
-          this.hostEl.style.zIndex = '1'
-        }, 500)
-      })
-    }
-  }
-
-  disconnectedCallback() {
-    console.log('disconnected')
   }
 
   @Watch('num')
@@ -45,7 +27,7 @@ export class NumberContainer {
 
   render() {
     return (
-      <Host ref={(el: HTMLElement) => this.hostEl = el} style={{ margin: `0 ${this.numberXMargin}` }}>
+      <Host style={{ margin: `0 ${this.numberXMargin}px` }}>
         <div class="numbers-container">
           <div ref={(el: HTMLDivElement) => this.numbersColumn = el} class="numbers-column">
             <div class="number-wrapper" data-value="0">

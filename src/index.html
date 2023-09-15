@@ -16,7 +16,7 @@
       border: 1px solid black;
       display: flex;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: flex-end;
     }
   </style>
 
@@ -25,29 +25,32 @@
 </head>
 
 <body>
-  <anmnum-animated-number background-color="grey" border-color="blue" text-color="white" number-x-margin="0.5rem" />
+  <anmnum-animated-number background-color="grey" border-color="blue" text-color="white" number-x-margin="8" />
 
   <script>
     const animatedNumberComponent = document.querySelector('anmnum-animated-number')
-    let num = 18
+    let num = 2
     animatedNumberComponent.setAttribute('number', num)
 
     setTimeout(() => {
-      num = 512
+      num = 95
       animatedNumberComponent.setAttribute('number', num)
 
       setTimeout(() => {
-        num = 1280
+        num = 220
         animatedNumberComponent.setAttribute('number', num)
 
         setTimeout(() => {
-          num = 293
+          num = 872
           animatedNumberComponent.setAttribute('number', num)
-        }, 1000)
 
-      }, 1000)
-
-    }, 1000)
+          setTimeout(() => {
+            num = 1256
+            animatedNumberComponent.setAttribute('number', num)
+          }, 2000)
+        }, 2000)
+      }, 2000)
+    }, 2000)
 
     // setInterval(() => {
     //   num--
