@@ -11,6 +11,7 @@ export class AnmnumAnimatedNumber {
   // TODO: Make each consecutive number more skewed on x axis to create 3d effect
   // TODO: Account for decimals? (add comma svg)
   // TODO: Add pad 0's funcionality, which pads a specified num of 0's in front of the numbers
+  // TODO: Accessibility for the numbers? Just have a hidden element that reads the number for screen readers?
   hostEl: HTMLElement
 
   @Prop() number: string
