@@ -11,7 +11,7 @@ export class NumberContainer {
   @Prop() num: string
   @Prop() numberXMargin: string
   @Prop() isInitialRender: boolean
-  @Prop() hasBorders: boolean
+  @Prop() hasBorders: string
 
   componentDidLoad() {
     if (this.num === '-')
@@ -96,7 +96,11 @@ export class NumberContainer {
             </div>
             <div class="number-wrapper" data-value=",">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-                <path xmlns="http://www.w3.org/2000/svg" d="M9.375 21.969l2.188 1.031-2.938 6.125-1.875-0.906z" stroke="#000" fill="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                {this.hasBorders && this.num === ',' ?
+                  <circle stroke="#000" fill="#000" r="2" cx="12" cy="12" />
+                  :
+                  <path xmlns="http://www.w3.org/2000/svg" d="M9.375 21.969l2.188 1.031-2.938 6.125-1.875-0.906z" stroke="#000" fill="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                }
               </svg>
             </div>
           </div>

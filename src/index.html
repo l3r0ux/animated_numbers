@@ -10,7 +10,7 @@
     body {
       margin: 0;
       padding: 0;
-      height: 20vh;
+      height: 50px;
       width: 80vw;
       margin: 10rem auto;
       border: 1px solid black;
@@ -25,8 +25,8 @@
 </head>
 
 <body>
-  <anmnum-animated-number background-color="grey" border-color="blue" text-color="white" number-x-margin="0"
-    hasBorders="false" />
+  <anmnum-animated-number has-borders="true" background-color="grey" border-color="blue" text-color="white"
+    number-x-margin="4" />
 
   <script>
     const animatedNumberComponent = document.querySelector('anmnum-animated-number')
@@ -38,7 +38,7 @@
       animatedNumberComponent.setAttribute('number', num)
 
       setTimeout(() => {
-        num = '3,256,510'
+        num = '3,256,510.22'
         animatedNumberComponent.setAttribute('number', num)
       }, 2000)
     }, 2000)

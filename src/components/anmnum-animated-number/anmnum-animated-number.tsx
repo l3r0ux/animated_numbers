@@ -9,8 +9,6 @@ export class AnmnumAnimatedNumber {
   // TODO: Make spin animation new number on boot up
   // TODO: Make infinite spin setting, that just spins, and if set off, it goes back to the number?
   // TODO: Make each consecutive number more skewed on x axis to create 3d effect
-  // TODO: Account for decimals? (add comma svg)
-  // TODO: Add pad 0's funcionality, which pads a specified num of 0's in front of the numbers
   // TODO: Accessibility for the numbers? Just have a hidden element that reads the number for screen readers?
   hostEl: HTMLElement
 
@@ -20,7 +18,7 @@ export class AnmnumAnimatedNumber {
   @Prop() borderWidth: string
   @Prop() backgroundColor: string
   @Prop() numberXMargin: string
-  @Prop() hasBorders: boolean
+  @Prop() hasBorders: string
 
   @State() numArray: string[]
 
