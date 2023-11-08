@@ -20,6 +20,7 @@ export class AnmnumAnimatedNumber {
   @Prop() borderWidth: string
   @Prop() backgroundColor: string
   @Prop() numberXMargin: string
+  @Prop() hasBorders: boolean
 
   @State() numArray: string[]
 
@@ -56,6 +57,7 @@ export class AnmnumAnimatedNumber {
       <Host ref={(el: HTMLElement) => this.hostEl = el}>
         {this.numArray.map((num: string) =>
           <number-container
+            hasBorders={this.hasBorders}
             num={num}
             numberXMargin={this.numberXMargin}
           />

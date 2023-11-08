@@ -11,6 +11,7 @@ export class NumberContainer {
   @Prop() num: string
   @Prop() numberXMargin: string
   @Prop() isInitialRender: boolean
+  @Prop() hasBorders: boolean
 
   componentDidLoad() {
     if (this.num === '-')
@@ -31,7 +32,10 @@ export class NumberContainer {
 
   render() {
     return (
-      <Host style={{ margin: `0 ${this.numberXMargin}px` }}>
+      <Host style={{
+        margin: `0 ${this.numberXMargin}px`,
+        backgroundColor: !this.hasBorders ? '#fff' : '',
+      }}>
         <div class="numbers-container">
           <div ref={(el: HTMLDivElement) => this.numbersColumn = el} class="numbers-column">
             <div class="number-wrapper" data-value="0">
