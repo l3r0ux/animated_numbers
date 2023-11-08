@@ -15,6 +15,8 @@ export class NumberContainer {
   componentDidLoad() {
     if (this.num === '-')
       return this.numbersColumn.style.transform = 'translateY(-1000%)'
+    if (this.num === ',' || this.num === '.')
+      return this.numbersColumn.style.transform = 'translateY(-1100%)'
     this.numbersColumn.style.transform = `translateY(-${this.num}00%)`
   }
 
@@ -22,6 +24,8 @@ export class NumberContainer {
   numWatchHandler(num: string) {
     if (num === '-')
       return this.numbersColumn.style.transform = 'translateY(-1000%)'
+    if (this.num === ',' || this.num === '.')
+      return this.numbersColumn.style.transform = 'translateY(-1100%)'
     this.numbersColumn.style.transform = `translateY(-${num}00%)`
   }
 
@@ -84,6 +88,11 @@ export class NumberContainer {
             <div class="number-wrapper" data-value="-">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
                 <path xmlns="http://www.w3.org/2000/svg" d="M6 12L18 12" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="number-wrapper" data-value=",">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <path xmlns="http://www.w3.org/2000/svg" d="M9.375 21.969l2.188 1.031-2.938 6.125-1.875-0.906z" stroke="#000" fill="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </div>
           </div>

@@ -29,27 +29,27 @@
 
   <script>
     const animatedNumberComponent = document.querySelector('anmnum-animated-number')
-    let num = '2'
+    let num = '2,4'
     animatedNumberComponent.setAttribute('number', num)
 
     setTimeout(() => {
-      num = '95'
+      num = '19,8'
       animatedNumberComponent.setAttribute('number', num)
 
-      setTimeout(() => {
-        num = '229'
-        animatedNumberComponent.setAttribute('number', num)
+      // setTimeout(() => {
+      //   num = '229'
+      //   animatedNumberComponent.setAttribute('number', num)
 
-        setTimeout(() => {
-          num = '872'
-          animatedNumberComponent.setAttribute('number', num)
+      //   setTimeout(() => {
+      //     num = '872'
+      //     animatedNumberComponent.setAttribute('number', num)
 
-          setTimeout(() => {
-            num = '1256'
-            animatedNumberComponent.setAttribute('number', num)
-          }, 2000)
-        }, 2000)
-      }, 2000)
+      //     setTimeout(() => {
+      //       num = '1256'
+      //       animatedNumberComponent.setAttribute('number', num)
+      //     }, 2000)
+      //   }, 2000)
+      // }, 2000)
     }, 2000)
 
     // setInterval(() => {
