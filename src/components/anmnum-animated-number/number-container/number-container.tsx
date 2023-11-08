@@ -34,7 +34,7 @@ export class NumberContainer {
     return (
       <Host style={{
         margin: `0 ${this.numberXMargin}px`,
-        backgroundColor: !this.hasBorders ? '#fff' : '',
+        backgroundColor: this.hasBorders ? '#000' : '#fff',
       }}>
         <div class="numbers-container">
           <div ref={(el: HTMLDivElement) => this.numbersColumn = el} class="numbers-column">
@@ -96,10 +96,10 @@ export class NumberContainer {
             </div>
             <div class="number-wrapper" data-value=",">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-                {this.hasBorders && this.num === ',' ?
-                  <circle stroke="#000" fill="#000" r="2" cx="12" cy="12" />
+                {this.num === ',' ?
+                  <polyline points="12 16, 10 21" stroke="#000" fill="#000" stroke-width="3" stroke-linecap="round" />
                   :
-                  <path xmlns="http://www.w3.org/2000/svg" d="M9.375 21.969l2.188 1.031-2.938 6.125-1.875-0.906z" stroke="#000" fill="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <circle fill="#000" r="2.5" cx="12" cy="20" />
                 }
               </svg>
             </div>

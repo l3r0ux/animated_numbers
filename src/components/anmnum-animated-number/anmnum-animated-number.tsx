@@ -10,6 +10,7 @@ export class AnmnumAnimatedNumber {
   // TODO: Make infinite spin setting, that just spins, and if set off, it goes back to the number?
   // TODO: Make each consecutive number more skewed on x axis to create 3d effect
   // TODO: Accessibility for the numbers? Just have a hidden element that reads the number for screen readers?
+  // TODO: Add color configurability for numbers and borders
   hostEl: HTMLElement
 
   @Prop() number: string
