@@ -14,7 +14,7 @@ export class AnmnumAnimatedNumber {
   hostEl: HTMLElement
 
   @Prop() number: string
-  @Prop() textColor: string
+  @Prop() fontColor: string
   @Prop() borderColor: string
   @Prop() borderWidth: string
   @Prop() backgroundColor: string
@@ -48,6 +48,7 @@ export class AnmnumAnimatedNumber {
     for (let i = 0; i < this.hostEl.shadowRoot.childElementCount; i++) {
       totalWidth += this.hostEl.shadowRoot.children[i].clientWidth + (Number(this.numberXMargin) * 2)
     }
+    console.log(totalWidth)
     this.hostEl.style.width = `${totalWidth}px`
   }
 
@@ -56,6 +57,10 @@ export class AnmnumAnimatedNumber {
       <Host ref={(el: HTMLElement) => this.hostEl = el}>
         {this.numArray.map((num: string) =>
           <number-container
+            fontColor={this.fontColor}
+            borderColor={this.borderColor}
+            borderWidth={this.borderWidth}
+            backgroundColor={this.backgroundColor}
             hasBorders={this.hasBorders}
             num={num}
             numberXMargin={this.numberXMargin}

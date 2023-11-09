@@ -8,10 +8,7 @@
 }
 
 .numbers-container {
-  background-color: #fff;
   box-sizing: border-box;
-  height: calc(100% - 8%);
-  width: calc(100% - 8%);
   border-radius: 10%;
   aspect-ratio: 7/10;
   overflow: hidden;

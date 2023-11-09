@@ -10,12 +10,16 @@ export namespace Components {
         "backgroundColor": string;
         "borderColor": string;
         "borderWidth": string;
+        "fontColor": string;
         "hasBorders": string;
         "number": string;
         "numberXMargin": string;
-        "textColor": string;
     }
     interface NumberContainer {
+        "backgroundColor": string;
+        "borderColor": string;
+        "borderWidth": string;
+        "fontColor": string;
         "hasBorders": string;
         "isInitialRender": boolean;
         "num": string;
@@ -45,12 +49,16 @@ declare namespace LocalJSX {
         "backgroundColor"?: string;
         "borderColor"?: string;
         "borderWidth"?: string;
+        "fontColor"?: string;
         "hasBorders"?: string;
         "number"?: string;
         "numberXMargin"?: string;
-        "textColor"?: string;
     }
     interface NumberContainer {
+        "backgroundColor"?: string;
+        "borderColor"?: string;
+        "borderWidth"?: string;
+        "fontColor"?: string;
         "hasBorders"?: string;
         "isInitialRender"?: boolean;
         "num"?: string;
