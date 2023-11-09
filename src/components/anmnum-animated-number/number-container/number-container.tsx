@@ -18,11 +18,13 @@ export class NumberContainer {
   @Prop() backgroundColor: string
 
   componentDidLoad() {
-    if (this.num === '-')
-      return this.numbersColumn.style.transform = 'translateY(-1000%)'
-    if (this.num === ',' || this.num === '.')
-      return this.numbersColumn.style.transform = 'translateY(-1100%)'
-    this.numbersColumn.style.transform = `translateY(-${this.num}00%)`
+    setTimeout(() => {
+      if (this.num === '-')
+        return this.numbersColumn.style.transform = 'translateY(-1000%)'
+      if (this.num === ',' || this.num === '.')
+        return this.numbersColumn.style.transform = 'translateY(-1100%)'
+      this.numbersColumn.style.transform = `translateY(-${this.num}00%)`
+    })
   }
 
   @Watch('num')
