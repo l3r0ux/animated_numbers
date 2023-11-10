@@ -6,11 +6,10 @@ import { Component, Host, Prop, State, h, Watch } from '@stencil/core';
   shadow: true,
 })
 export class AnmnumAnimatedNumber {
-  // TODO: Make spin animation new number on boot up
   // TODO: Make infinite spin setting, that just spins, and if set off, it goes back to the number?
-  // TODO: Make each consecutive number more skewed on x axis to create 3d effect
-  // TODO: Accessibility for the numbers? Just have a hidden element that reads the number for screen readers?
-  // TODO: Add color configurability for numbers and borders
+  // TODO: Change number-column container to not work with translateY, -
+  // but make the container basically a circle (that goes into the screen), then rotate it
+  // TODO: Get number svgs that look like normal number font
   hostEl: HTMLElement
 
   @Prop() number: string
