@@ -6,10 +6,6 @@ import { Component, Host, Prop, State, h, Watch } from '@stencil/core';
   shadow: true,
 })
 export class AnmnumAnimatedNumber {
-  // TODO: Make infinite spin setting, that just spins, and if set off, it goes back to the number?
-  // TODO: Change number-column container to not work with translateY, -
-  // but make the container basically a circle (that goes into the screen), then rotate it
-  // TODO: Get number svgs that look like normal number font
   hostEl: HTMLElement
 
   @Prop() number: string
@@ -47,7 +43,6 @@ export class AnmnumAnimatedNumber {
     for (let i = 0; i < this.hostEl.shadowRoot.childElementCount; i++) {
       totalWidth += this.hostEl.shadowRoot.children[i].clientWidth + (Number(this.numberXMargin) * 2)
     }
-    console.log(totalWidth)
     this.hostEl.style.width = `${totalWidth}px`
   }
 

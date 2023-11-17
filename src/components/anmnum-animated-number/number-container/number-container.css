@@ -25,12 +25,13 @@
 }
 
 .numbers-container .numbers-column {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 100%;
-  /* ADD 100 MORE TRANSLATION TO GET TO NEXT NUMBER */
-  transform: translateY(0);
   overflow: visible;
   transition: all 600ms ease;
 }

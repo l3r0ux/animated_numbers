@@ -33,20 +33,20 @@
     let num = '0'
     animatedNumberComponent.setAttribute('number', num)
 
-    // setTimeout(() => {
-    //   num = '1,256'
-    //   animatedNumberComponent.setAttribute('number', num)
-
-    //   setTimeout(() => {
-    //     num = '3,256,510.22'
-    //     animatedNumberComponent.setAttribute('number', num)
-    //   }, 2000)
-    // }, 2000)
-
-    setInterval(() => {
-      num++
+    setTimeout(() => {
+      num = '1,256'
       animatedNumberComponent.setAttribute('number', num)
-    }, 1000)
+
+      setTimeout(() => {
+        num = '3,256,510.22'
+        animatedNumberComponent.setAttribute('number', num)
+      }, 2000)
+    }, 2000)
+
+    // setInterval(() => {
+    //   num++
+    //   animatedNumberComponent.setAttribute('number', num)
+    // }, 1000)
   </script>
 </body>
 
